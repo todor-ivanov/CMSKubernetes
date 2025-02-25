@@ -58,7 +58,7 @@ spec:
         job: dbs2go-global-w
       annotations:
         prometheus.io/scrape: 'true'
-        prometheus.io/path: "/dbs/prod/global/DBSWriter/metrics"
+        prometheus.io/path: "/dbs/int/global/DBSWriter/metrics"
         prometheus.io/port: "9253"
     spec:
       initContainers:
@@ -104,7 +104,7 @@ spec:
             cpu: "8000m"
         livenessProbe:
           httpGet:
-            path: /dbs/prod/global/DBSWriter/healthz
+            path: /dbs/int/global/DBSWriter/healthz
             port: 9253
             httpHeaders:
             - name: Accept

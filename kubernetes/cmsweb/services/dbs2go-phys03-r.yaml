@@ -58,7 +58,7 @@ spec:
         job: dbs2go-phys03-r
       annotations:
         prometheus.io/scrape: 'true'
-        prometheus.io/path: "/dbs/prod/phys03/DBSReader/metrics"
+        prometheus.io/path: "/dbs/int/phys03/DBSReader/metrics"
         prometheus.io/port: "9254"
     spec:
       securityContext:
@@ -85,7 +85,7 @@ spec:
             cpu: "4000m"
         livenessProbe:
           httpGet:
-            path: /dbs/prod/phys03/DBSReader/healthz
+            path: /dbs/int/phys03/DBSReader/healthz
             port: 9254
             httpHeaders:
             - name: Accept

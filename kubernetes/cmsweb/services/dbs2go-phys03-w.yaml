@@ -58,7 +58,7 @@ spec:
         job: dbs2go-phys03-w
       annotations:
         prometheus.io/scrape: 'true'
-        prometheus.io/path: "/dbs/prod/phys03/DBSWriter/metrics"
+        prometheus.io/path: "/dbs/int/phys03/DBSWriter/metrics"
         prometheus.io/port: "9255"
     spec:
       securityContext:
@@ -85,7 +85,7 @@ spec:
             cpu: "8000m"
         livenessProbe:
           httpGet:
-            path: /dbs/prod/phys03/DBSWriter/healthz
+            path: /dbs/int/phys03/DBSWriter/healthz
             port: 9255
             httpHeaders:
             - name: Accept

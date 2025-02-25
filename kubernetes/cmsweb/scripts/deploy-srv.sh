@@ -173,7 +173,7 @@ if [ -d $tmpDir ]; then
 fi
 mkdir -p $tmpDir
 cd $tmpDir
-curl -ksLO https://raw.githubusercontent.com/dmwm/CMSKubernetes/master/kubernetes/cmsweb/services/$srv.yaml
+curl -ksLO https://raw.githubusercontent.com/dmwm/CMSKubernetes/preprod/kubernetes/cmsweb/services/$srv.yaml
 
 # check that service file has imagetag
 if [ -z "`grep imagetag $srv.yaml`" ]; then
